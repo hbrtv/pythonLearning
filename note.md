@@ -12,4 +12,4 @@ learning python from beginning
     print('I work for more than %d hours today at %-10s' % workplace2)
 
     mood = 'frustrated'
-    print('It make me %10s  to work for more than %d hours today at %-10s' % mood % workplace2)
+    print('It make me %10s  to work for more than %d hours today at %-10s' % (mood, workplace2))
