@@ -13,3 +13,10 @@ learning python from beginning
 
     mood = 'frustrated'
     print('It make me %10s  to work for more than %d hours today at %-10s' % (mood, workplace2))
+
+## format() method of string
+### [url for format() method tutorial](https://www.w3schools.com/python/ref_string_format.asp)
+    text = "apple today is ${price:.4f}"
+    text.format(price = 999.99)
+    
+
