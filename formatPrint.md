@@ -13,3 +13,9 @@ learning python from beginning
 
     mood = 'frustrated'
     print('It make me %10s  to work for more than %d hours today at %-10s' % (mood, workplace2))
+
+## format() method of string
+    txt = "For only {price:.2f} dollars!"
+    print(txt.format(price = 49))
+
+    (webpage for format method)[https://www.w3schools.com/python/ref_string_format.asp]
