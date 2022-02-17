@@ -15,7 +15,12 @@ learning python from beginning
     print('It make me %10s  to work for more than %d hours today at %-10s' % (mood, workplace2))
 
 ## format() method of string
-    txt = "For only {price:.2f} dollars!"
-    print(txt.format(price = 49))
-
+<<<<<<< HEAD
     (webpage for format method)[https://www.w3schools.com/python/ref_string_format.asp]
+=======
+### [url for format() method tutorial](https://www.w3schools.com/python/ref_string_format.asp)
+    text = "apple today is ${price:.4f}"
+    text.format(price = 999.99)
+    
+
+>>>>>>> 6017cb616d3ced972c5069799f4f033e6eaba91e
