@@ -39,6 +39,7 @@ print(binaRray)
 # 在以下例子中,如果以10的0次方,也就是1的倍数作为趋近对象.也就是0,1,2,3...9
 # 那么如果存在0.5,则会趋近与0,2,4,6,8
 # 如果以10的-1次方,也就是0.1作为趋近对象,那么猜测应该以0.2,0.4,0.6,0.8为趋近对象
+# round(floatNumber,ndigits)
 for i in range(1,15,2):
     floatNumber = i / 2
     rounderNumber = round(floatNumber)
@@ -54,10 +55,21 @@ for i in range(1,15,2):
 '''
 from decimal import localcontext,Decimal,ROUND_HALF_UP
 '''
+'''
+when using Decimal quantize function
+you should know about this
+Decimal('3.14') is precisely 3.14
+Decimal(3.14) is float point number with precision definded by localcontext.prec
+so if getcontext().prec = 28
+Decimal(3.14) may be Decimal('3.140000000000000124344978758017532527446746826171875')
+'''
 with localcontext() as ctx:
-    ctx.rounding = ROUND_HALF_UP
+    # ctx.rounding = ROUND_HALF_UP
     for i in range(1,15,2):
         upFloat = Decimal(i) / 2
         upRound = upFloat.to_integral_value()
         print(str(upFloat) + " -> " + str(upRound))
     print( '0.4 -> ' + str( Decimal(0.4).to_integral_value() ) )
+    # ctx.prec = 2
+    print( 'After quantize 1 - 0.45 -> ' + str( Decimal('0.451').quantize(Decimal('0.1'))))
+    
